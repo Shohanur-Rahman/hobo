@@ -18,6 +18,20 @@
             <div class="col-lg-12 col-md-12 col-xs-12 wow fadeIn">
 
                 @php
+                    $upcomingSlider = \App\models\MainSlider::where('is_upcoming',1)->get();
+                @endphp
+
+                @include('user.partials.widget.category_slider', ['sliders' => $upcomingSlider])
+
+            </div>
+        </div>
+    @endif
+
+    @if(count($allSliders) > 0 )
+        <div class="row female-bg">
+            <div class="col-lg-12 col-md-12 col-xs-12 wow fadeIn">
+
+                @php
                     $femaleSlider = \App\models\MainSlider::with('category')->where('category_id',$femaleProductCategory->id)->get();
                 @endphp
 
