@@ -37,9 +37,10 @@
             @method('PATCH')
             @csrf
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card border-0 px-4 py-4">
+                <div class="card border-0 py-4 px-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+
                             <div class="table-responsive">
                                 <table class="cart-table">
                                     <thead>
@@ -134,27 +135,27 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-30">
-                    <div class="col-lg-4">
-                        <div class="cart-update">
-                            <a href="{{route('app.home')}}" class="btn-common">CONTINUE SHOPPING</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="cart-update">
-                            <a href="{{route('cart.clear')}}" class="btn-common btn-danger">CLEAR CART</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="cart-update pull-right">
-                            <button type="submit" class="btn-common btn-success">UPDATE CART</button>
-                        </div>
-                    </div>
-                </div>
 
+                        </div>
+                    </div>
+                    <div class="row mt-30">
+                        <div class="col-lg-4">
+                            <div class="cart-update">
+                                <a href="{{route('app.home')}}" class="btn-common">CONTINUE SHOPPING</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="cart-update">
+                                <a href="{{route('cart.clear')}}" class="btn-common btn-danger">CLEAR CART</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="cart-update pull-right">
+                                <button type="submit" class="btn-common btn-success">UPDATE CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row mt-40 d-flex justify-content-between ">
                     <div class="col-lg-4">
@@ -168,38 +169,41 @@
                         </div>--}}
                     </div>
                     <div class="col-lg-4">
-                        <div class="cart-box cart-total">
-                            <h5>Cart Total</h5>
-                            <div class="cart-box-inner">
-                                <table class="table">
-                                    <tbody>
-                                    <tr>
-                                        <td>SUB TOTAL:</td>
-                                        <td><span>${{$taotalPrice}}</span></td>
-                                    </tr>
+                        <div class="card border-0 py-4 px-4">
+                            <div class="cart-box cart-total">
+                                <h5>Cart Total</h5>
+                                <div class="cart-box-inner">
+                                    <table class="table">
+                                        <tbody>
+                                        <tr>
+                                            <td>SUB TOTAL:</td>
+                                            <td><span>${{$taotalPrice}}</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>Shipping Charge <b>(+)</b>:</td>
-                                        <td><span>${{$shippingCharge}}</span></td>
-                                    </tr>
+                                        <tr>
+                                            <td>Shipping Charge <b>(+)</b>:</td>
+                                            <td><span>${{$shippingCharge}}</span></td>
+                                        </tr>
 
-                                    <tr>
-                                        <td>GRAND TOTAL:</td>
-                                        <td><span>${{$taotalPrice + $shippingCharge}}</span></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <div class="proceed-checkout">
-                                    <div class="col-lg-12">
-                                        <a href="#">Checkout with multiple address</a>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        @if($myCartList->isNotEmpty())
-                                            <a href="{{route('checkouts.create')}}" class="btn-common">PROCEED TO CHECK
-                                                OUT</a>
-                                        @else
-                                            <a href="javascript:" class="btn-common">Please Buy first</a>
-                                        @endif
+                                        <tr>
+                                            <td>GRAND TOTAL:</td>
+                                            <td><span>${{$taotalPrice + $shippingCharge}}</span></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="proceed-checkout">
+                                        <div class="col-lg-12">
+                                            <a href="#">Checkout with multiple address</a>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            @if($myCartList->isNotEmpty())
+                                                <a href="{{route('checkouts.create')}}" class="btn-common">PROCEED TO
+                                                    CHECK
+                                                    OUT</a>
+                                            @else
+                                                <a href="javascript:" class="btn-common">Please Buy first</a>
+                                            @endif
+                                        </div>
                                     </div>
                                 </div>
                             </div>
