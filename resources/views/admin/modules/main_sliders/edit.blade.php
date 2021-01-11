@@ -59,6 +59,18 @@
                                     </select>
                                 </div>
 
+                                <div class="form-group">
+                                    <div class="new-checkbox">
+                                        <div class="inline-widged">
+                                            <label for="is_upcoming" class="single-label">Show On Upcoming</label>
+                                            <label class="switch">
+                                                <input type="checkbox" id="is_upcoming" name="is_upcoming" {{ $mainSlider->is_upcoming == 1 ? "checked" : '' }} data-parsley-multiple="is_upcoming">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <button type="submit" class="btn btn-success mr-2 float-right">Update Main Slider</button>
                             </form>
 
@@ -91,6 +103,18 @@
                                 $('#categoryId').removeAttr('required');
                             }else{
                                 $('#categoryId').removeAttr('disabled');
+                            }
+                        });
+
+                        $("#is_upcoming").click(function(){
+                            if($(this).is(':checked')){
+                                $('#categoryId').prop('disabled', 'disabled');
+                                $('#categoryId').removeAttr('required');
+                                $('#productId').prop('disabled', 'disabled');
+                                $('#productId').removeAttr('required');
+                            }else{
+                                $('#categoryId').removeAttr('disabled');
+                                $('#productId').removeAttr('disabled');
                             }
                         });
 

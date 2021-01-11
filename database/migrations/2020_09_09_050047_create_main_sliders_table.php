@@ -20,6 +20,7 @@ class CreateMainSlidersTable extends Migration
             $table->string('name');
             $table->string('caption');
             $table->string('image_url');
+            $table->boolean('is_upcoming')->nullable();
             $table->timestamps();
         });
     }

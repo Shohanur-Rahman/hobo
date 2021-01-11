@@ -37,6 +37,7 @@ class MainSliderController extends Controller
             'category_id'=>$request['category_id'],
             'name'=>$request['name'],
             'caption'=>$request['caption'],
+            'is_upcoming'=>$request->has('is_upcoming'),
             'image_url'=>$helper->uploadImage($request->File('image_url'), 'uploads/sliders/mainSlider/'),
         ]);
 
@@ -70,6 +71,7 @@ class MainSliderController extends Controller
             'category_id'=>$request['category_id'],
             'name'=>$request['name'],
             'caption'=>$request['caption'],
+            'is_upcoming'=>$request->has('is_upcoming'),
             'image_url'=>$imageUpload,
         ]);
 
