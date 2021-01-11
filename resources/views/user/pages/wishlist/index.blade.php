@@ -34,8 +34,8 @@
 
                         <div class="col-sm-12">
 
-                            <div class="table-responsive">
-                                <table class="cart-table">
+                            <div class="table-responsive cat-table-hidden">
+                                <table class="cart-table ">
                                     <thead>
                                     <tr>
                                         <th>Image</th>

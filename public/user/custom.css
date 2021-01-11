@@ -194,7 +194,9 @@ body{
     transform: scale(1.05);
     transition: .3s;
 }
-
+.cat-table-hidden{
+    overflow: hidden;
+}
 .add-to-cart {
     background-color: rgba(204, 210, 234, .9);
     border-color: rgba(204, 210, 234, .9);

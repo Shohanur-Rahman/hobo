@@ -14,33 +14,35 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="customer-supporter">
-                        <h1>How can we help you?</h1>
-                        <div class="single-supporter mt-35">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="{{asset('user/assets/images/contact/1.jpg')}}" alt=""/>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="supporter-desc mt-sm-20">
-                                        <h3>John Doe</h3>
-                                        <p>Customer Realations</p>
-                                        <p>963.806.0919</p>
-                                        <p>info@hobo.com</p>
+                        <div class="white-bg py-4 px-4">
+                            <h1>How can we help you?</h1>
+                            <div class="single-supporter mt-35">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{asset('user/assets/images/contact/1.jpg')}}" alt=""/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="supporter-desc mt-sm-20">
+                                            <h3>John Doe</h3>
+                                            <p>Customer Realations</p>
+                                            <p>963.806.0919</p>
+                                            <p>info@hobo.com</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-supporter mt-65">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="{{asset('user/assets/images/contact/2.jpg')}}" alt=""/>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="supporter-desc mt-sm-20">
-                                        <h3>Mark</h3>
-                                        <p>Customer Support</p>
-                                        <p>963.806.0919</p>
-                                        <p>hello@hobo.com</p>
+                            <div class="single-supporter mt-65">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="{{asset('user/assets/images/contact/2.jpg')}}" alt=""/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="supporter-desc mt-sm-20">
+                                            <h3>Mark</h3>
+                                            <p>Customer Support</p>
+                                            <p>963.806.0919</p>
+                                            <p>hello@hobo.com</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

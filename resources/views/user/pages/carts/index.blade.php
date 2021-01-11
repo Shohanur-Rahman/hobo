@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-sm-12">
 
-                            <div class="table-responsive">
+                            <div class="table-responsive cat-table-hidden">
                                 <table class="cart-table">
                                     <thead>
                                     <tr>

@@ -2,7 +2,7 @@
 @section('title', "HOBO")
 @section('content')
     <!--page-banner-area start-->
-    <div class="pt-5">
+    <div class="pt-5 text-white">
         <div class="container wow fadeInDown">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -14,14 +14,14 @@
     <!--banner-area end-->
 
     <!--about-area start-->
-    <div class="about-area mt-50">
+    <div class="about-area mt-50 text-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 wow fadeInLeft">
                     <img class="img-100p" src="{{asset('images/about1.jpg')}}" alt=""/>
                 </div>
                 <div class="col-lg-6 mt-sm-30 wow fadeInRight">
-                    <h4>ABOUT US</h4>
+                    <h4 class="text-white">ABOUT US</h4>
                     <p>Fashion Nova is the world’s leading quick-to-market apparel and lifestyle brand. We are renowned
                         for delivering the season’s most wanted styles to millions of people worldwide, which earned us
                         the title of the #1 Most-Searched Fashion Brand on Google in 2018.</p>
@@ -90,7 +90,7 @@
             <div class="row py-5">
                 <div class="row">
                     <div class="col-lg-6 wow fadeInLeft">
-                        <h4>OUR MISSION</h4>
+                        <h4 class="text-white">OUR MISSION</h4>
                         <p>Our team works around-the-clock to bring you the world’s hottest styles. We forecast fashion
                             trends before anyone else, and introduce 1,000+ new arrivals to our site every week! We
                             listen to our customers and are always finding innovative ways to improve and deliver the
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12 wow fadeInDown">
-                    <h3 class="text-center">"OTHER BRANDS WORK HARD, BUT FASHION NOVA WORKS THE HARDEST..."</h3>
+                    <h3 class="text-center text-white">"OTHER BRANDS WORK HARD, BUT FASHION NOVA WORKS THE HARDEST..."</h3>
                 </div>
             </div>
         </div>
@@ -126,8 +126,8 @@
                 <div class="col-lg-6 wow fadeInLeft">
                     <img class="img-100p" src="{{asset('images/about3.jpg')}}" alt=""/>
                 </div>
-                <div class="col-lg-6 mt-sm-30 wow fadeInRight">
-                    <h4>THE FASHION NOVA STORY</h4>
+                <div class="col-lg-6 mt-sm-30 wow fadeInRight text-white">
+                    <h4 class="text-white">THE FASHION NOVA STORY</h4>
                     <p>Founded in 2006, Fashion Nova has been privately owned and operated by CEO Richard Saghian. With
                         a keen eye, Saghian was able to identify a missing part of the women’s apparel market by
                         bringing sexy clubwear and jeans for women to the forefront of the affordable fashion industry.
@@ -151,7 +151,7 @@
         </div>
     </div>
 
-    <div class="pt-5">
+    <div class="pt-5 text-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12 pb-3 wow fadeInDown">
