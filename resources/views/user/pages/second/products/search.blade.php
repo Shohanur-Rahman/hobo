@@ -32,88 +32,99 @@ function makeURL($queryString, $key, $value)
                 <div class="sidebar">
 
                     <div class="price_filter mt-40">
-                        <div class="section-title">
-                            <h3>Filter by price</h3>
-                        </div>
-                        <div class="price_slider_amount">
-                            <form method="get" action="{{route('product.search')}}">
-                                <input type="hidden" name="min" id="hdnMinPrice">
-                                <input type="hidden" name="max" id="hdnMaxPrice">
-                                <input type="hidden" name="color"
-                                       value="{{request()->query('brand') ?? request()->query('brand')}}">
-                                <input type="hidden" name="page_size"
-                                       value="{{request()->query('page_size') ?? request()->query('page_size')}}">
-                                <input type="hidden" name="brand"
-                                       value="{{request()->query('brand') ?? request()->query('brand')}}">
-                                <input type="hidden" name="order"
-                                       value="{{request()->query('order') ?? request()->query('order')}}">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <input type="text" id="amount" placeholder="Add Your Price"/>
+                        <div class="white-bg px-4 py-4">
+                            <div class="section-title">
+                                <h3>Filter by price</h3>
+                            </div>
+                            <div class="price_slider_amount">
+                                <form method="get" action="{{route('product.search')}}">
+                                    <input type="hidden" name="min" id="hdnMinPrice">
+                                    <input type="hidden" name="max" id="hdnMaxPrice">
+                                    <input type="hidden" name="color"
+                                           value="{{request()->query('brand') ?? request()->query('brand')}}">
+                                    <input type="hidden" name="page_size"
+                                           value="{{request()->query('page_size') ?? request()->query('page_size')}}">
+                                    <input type="hidden" name="brand"
+                                           value="{{request()->query('brand') ?? request()->query('brand')}}">
+                                    <input type="hidden" name="order"
+                                           value="{{request()->query('order') ?? request()->query('order')}}">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <input type="text" id="amount" placeholder="Add Your Price"/>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <button>Filter</button>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <button>Filter</button>
-                                    </div>
-                                </div>
 
-                            </form>
+                                </form>
+                            </div>
+                            <div id="slider-range"></div>
                         </div>
-                        <div id="slider-range"></div>
                     </div>
 
                     <div class="list-filter mt-43">
-                        <div class="section-title">
-                            <h3>Brands</h3>
-                        </div>
-                        <ul class="list-none mt-25">
-                            <li class="{{request()->query('brand') == 0 ? 'active' : ''}}" data-id="0">
-                                <a href="{{route('product.search').generateQueryString('brand', 0)}}">All Brands</a>
-                            </li>
-                            @foreach($brands as $brand)
-                                <li class="{{request()->query('brand') == $brand->id ? 'active' : ''}}" data-id="{{$brand->id}}">
-                                    <a href="{{route('product.search').generateQueryString('brand', $brand->id)}}">{{$brand->name}}</a>
+                        <div class="white-bg px-4 py-4">
+                            <div class="section-title">
+                                <h3>Brands</h3>
+                            </div>
+                            <ul class="list-none mt-25">
+                                <li class="{{request()->query('brand') == 0 ? 'active' : ''}}" data-id="0">
+                                    <a href="{{route('product.search').generateQueryString('brand', 0)}}">All Brands</a>
                                 </li>
-                            @endforeach
-                        </ul>
+                                @foreach($brands as $brand)
+                                    <li class="{{request()->query('brand') == $brand->id ? 'active' : ''}}"
+                                        data-id="{{$brand->id}}">
+                                        <a href="{{route('product.search').generateQueryString('brand', $brand->id)}}">{{$brand->name}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
 
-                <div class="list-filter mt-43">
-                    <div class="section-title">
-                        <h3>Colors</h3>
+                    <div class="list-filter mt-43">
+                        <div class="white-bg px-4 py-4">
+                            <div class="section-title">
+                                <h3>Colors</h3>
+                            </div>
+                            <ul class="list-none mt-25">
+                                <li class="{{request()->query('color') == 0 ? 'active' : ''}}" data-id="0">
+                                    <a href="{{route('product.search').generateQueryString('color', 0)}}">All Colors</a>
+                                </li>
+                                @foreach($colors as $color)
+                                    <li class="{{request()->query('color') == $color->id ? 'active' : ''}}"
+                                        data-id="{{$color->id}}">
+                                        <a href="{{route('product.search').generateQueryString('color', $color->id)}}">{{$color->color}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="list-none mt-25">
-                        <li class="{{request()->query('color') == 0 ? 'active' : ''}}" data-id="0">
-                            <a href="{{route('product.search').generateQueryString('color', 0)}}">All Colors</a>
-                        </li>
-                        @foreach($colors as $color)
-                            <li class="{{request()->query('color') == $color->id ? 'active' : ''}}" data-id="{{$color->id}}">
-                                <a href="{{route('product.search').generateQueryString('color', $color->id)}}">{{$color->color}}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
 
-                <div class="list-filter mt-43">
-                    <div class="section-title">
-                        <h3>Colors</h3>
+                    <div class="list-filter mt-43">
+                        <div class="white-bg px-4 py-4">
+                            <div class="section-title">
+                                <h3>Colors</h3>
+                            </div>
+                            <ul class="list-none mt-25">
+                                <li class="{{request()->query('size') == 0 ? 'active' : ''}}" data-id="0">
+                                    <a href="{{route('product.search').generateQueryString('size', 0)}}">All Sizes</a>
+                                </li>
+                                @foreach($sizes as $size)
+                                    <li class="{{request()->query('size') == $size->id ? 'active' : ''}}"
+                                        data-id="{{$size->id}}">
+                                        <a href="{{route('product.search').generateQueryString('size', $size->id)}}">{{$size->size}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="list-none mt-25">
-                        <li class="{{request()->query('size') == 0 ? 'active' : ''}}" data-id="0">
-                            <a href="{{route('product.search').generateQueryString('size', 0)}}">All Sizes</a>
-                        </li>
-                        @foreach($sizes as $size)
-                            <li class="{{request()->query('size') == $size->id ? 'active' : ''}}" data-id="{{$size->id}}">
-                                <a href="{{route('product.search').generateQueryString('size', $size->id)}}">{{$size->size}}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
                 </div>
             </div>
             <div class="col-xl-9 col-lg-9">
-                <div class="row align-items-center">
+                <div class="row align-items-center white-bg mt-1 mx-2p">
 
-                    <div class="col-lg-5 col-md-6">
+                    <div class="col-lg-6 col-md-6">
 
                         <div class="dropdown filter-box">
                             <button class="btn-filter" type="button" id="shortByDropDown" data-toggle="dropdown"
@@ -163,7 +174,7 @@ function makeURL($queryString, $key, $value)
                         </div>
 
                     </div>
-                    <div class="col-lg-5 col-md-12 pt-3">
+                    <div class="col-lg-6 col-md-12 pt-3">
                         <div class="site-pagination pull-right">
                             <span class="pt-5">Showing {{$products->firstItem()}}–{{$products->lastItem()}} of {{$products->total()}} results</span>
                         </div>
@@ -195,10 +206,12 @@ function makeURL($queryString, $key, $value)
                                             <div class="flip-box-front">
                                                 <div class="product-front-box">
                                                     <h4 class="product-title-name">
-                                                        <a title="{{$product->title}}" href="{{route('product.search.show', $product->slug)}}">{{$product->title}}</a>
+                                                        <a title="{{$product->title}}"
+                                                           href="{{route('product.search.show', $product->slug)}}">{{$product->title}}</a>
                                                     </h4>
                                                     <a href="{{route('product.search.show', $product->slug)}}"><img
-                                                            class="product-item-listed-image" src="{{asset($product->featured_image)}}"
+                                                            class="product-item-listed-image"
+                                                            src="{{asset($product->featured_image)}}"
                                                             alt="{{$product->title}}" title="{{$product->title}}"/></a>
 
                                                     <div class="product-price-box">
@@ -206,7 +219,8 @@ function makeURL($queryString, $key, $value)
                                                             <span>$ {{$product->new_price}}</span>
                                                         </div>
                                                         <div class="rating-box pull-right d-flex">
-                                                            <div title="{{$rating > 0 ? $rating : 'No rating yet'}}" id="dataReadonlyReview"
+                                                            <div title="{{$rating > 0 ? $rating : 'No rating yet'}}"
+                                                                 id="dataReadonlyReview"
                                                                  data-rating-stars="5"
                                                                  data-rating-readonly="true"
                                                                  data-rating-half="true"
@@ -223,20 +237,24 @@ function makeURL($queryString, $key, $value)
                                                         Product</a>
                                                 </div>
                                                 <div class="product-action-form">
-                                                    <form class="d-inline" id="cartForm_{{$product->id}}_list" action="{{route('product.add_to_cart')}}" method="post">
+                                                    <form class="d-inline" id="cartForm_{{$product->id}}_list"
+                                                          action="{{route('product.add_to_cart')}}" method="post">
                                                         @csrf
                                                         <input type="hidden" name="product_id" value="{{$product->id}}">
-                                                        <input type="hidden" name="product_price" value="{{$product->new_price}}">
+                                                        <input type="hidden" name="product_price"
+                                                               value="{{$product->new_price}}">
                                                         <input type="hidden" value="1" name="quantity"/>
                                                         <button type="submit" frm="#cartForm_{{$product->id}}_list"
                                                                 class="btn btn-success add-to-cart dummy_cart_btn"
                                                                 url="{{route('product.add_to_cart')}}"
-                                                                id="cart_btn_{{$product->id}}_list">Add to Cart</button>
+                                                                id="cart_btn_{{$product->id}}_list">Add to Cart
+                                                        </button>
                                                     </form>
 
                                                     <form class="d-inline" action="javascript:void(0)" method="post">
                                                         @csrf
-                                                        <a id="{{$product->id}}" href="javascript:void(0)" class="product-wishlist product-id"><i class="ti-heart"></i></a>
+                                                        <a id="{{$product->id}}" href="javascript:void(0)"
+                                                           class="product-wishlist product-id"><i class="ti-heart"></i></a>
                                                     </form>
 
                                                 </div>
@@ -257,7 +275,7 @@ function makeURL($queryString, $key, $value)
                                 $ratingCount = \App\Models\Products::ratingCount($product->id)
                             @endphp
 
-                            <div class="product-single wide-style">
+                            <div class="product-single wide-style white-bg">
                                 <div class="row align-items-center">
                                     <div class="col-xl-3 col-lg-6 col-md-6">
                                         <div class="product-thumb">
@@ -270,7 +288,9 @@ function makeURL($queryString, $key, $value)
                                     <div class="col-xl-6 col-lg-8 col-md-8 product-desc mt-md-50 sm-mt-50">
                                         <form class="d-inline" action="javascript:void(0)" method="post">
                                             @csrf
-                                            <a id="{{$product->id}}" href="javascript:void(0)" class="product-wishlist product-id add-to-wishlist"><i class="ti-heart"></i></a>
+                                            <a id="{{$product->id}}" href="javascript:void(0)"
+                                               class="product-wishlist product-id add-to-wishlist"><i
+                                                    class="ti-heart"></i></a>
                                         </form>
                                         <div class="product-title">
                                             <h4>
@@ -278,12 +298,13 @@ function makeURL($queryString, $key, $value)
                                             </h4>
                                         </div>
                                         <div class="product-rating">
-                                            <div title="{{$rating > 0 ? $rating : 'No rating yet'}}"   id="dataReadonlyReview"
-                                                  data-rating-stars="5"
-                                                  data-rating-readonly="true"
-                                                  data-rating-half="true"
-                                                  data-rating-value="{{$rating}}"
-                                                  data-rating-input="#dataReadonlyInput">
+                                            <div title="{{$rating > 0 ? $rating : 'No rating yet'}}"
+                                                 id="dataReadonlyReview"
+                                                 data-rating-stars="5"
+                                                 data-rating-readonly="true"
+                                                 data-rating-half="true"
+                                                 data-rating-value="{{$rating}}"
+                                                 data-rating-input="#dataReadonlyInput">
                                             </div>
                                             {{--<span>({{$ratingCount}})</span>--}}
                                         </div>
@@ -299,7 +320,8 @@ function makeURL($queryString, $key, $value)
                                                 </div>
                                                 <span>{{$product->new_price}}</span>
                                             </div>
-                                            <form class="d-inline" id="cartForm_{{$product->id}}_grid" action="{{route('product.add_to_cart')}}"
+                                            <form class="d-inline" id="cartForm_{{$product->id}}_grid"
+                                                  action="{{route('product.add_to_cart')}}"
                                                   method="post">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{$product->id}}">
@@ -319,7 +341,7 @@ function makeURL($queryString, $key, $value)
                         @endforeach
                     </div>
                 </div>
-                <div class="row align-items-center mt-30">
+                <div class="row align-items-center mt-30 white-bg mx-1 px-1 py-1">
                     <div class="col-lg-6">
                         <div class="site-pagination">
                             {{$products->links()}}
@@ -365,7 +387,6 @@ function makeURL($queryString, $key, $value)
 
 
     });
-
 
 
 </script>

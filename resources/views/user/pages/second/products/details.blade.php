@@ -6,7 +6,7 @@ $rating = \App\Models\Products::rating($product->id);
 @endphp
 
 <div class="product-details-area mt-20">
-    <div class="container-fluid">
+    <div class="container-fluid white-bg py-4">
         <div class="product-details">
             <div class="row">
                 <div class="col-lg-1 col-md-2">
@@ -164,7 +164,10 @@ $rating = \App\Models\Products::rating($product->id);
         </div>
     </div>
 </div>
-@include('user.partials.widget.product_reviews')
+
+<div class="white-bg py-4 mt-5">
+    @include('user.partials.widget.product_reviews')
+</div>
 
 <script>
     $('.dummy_select_size').click(function () {

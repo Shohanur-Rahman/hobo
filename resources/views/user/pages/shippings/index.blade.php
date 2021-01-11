@@ -6,35 +6,38 @@
 
             @include('user.pages.profiles.partial.sidebar')
             <div class="col-md-9 col-sm-8 col-xs-12 col-sm-push-4 col-md-push-3 pb-4">
-                <x-inform-users></x-inform-users>
-                @include('user.pages.profiles.partial.details')
-                
-@if(count($shippingAddresses) > 0)
-                <div class="card px-3 py-3 mt-3">
-                    <div class="row">
-                        @foreach($shippingAddresses as $shippingAddress)
-                            <div class="col-md-4 col-xl-3 col-sm-6 address-height">
-                                <h5>{!!html_entity_decode($shippingAddress->title ? $shippingAddress->title . '' : '')!!}</h5>
-                                <address>
-                                    {!!html_entity_decode($shippingAddress->line1 ? $shippingAddress->line1 . '<br/>' : '')!!}
-                                    {!!html_entity_decode($shippingAddress->line2 ? $shippingAddress->line2 . '<br/>' : '')!!}
-                                    {!!html_entity_decode($shippingAddress->city ? $shippingAddress->city . '<br/>' : '')!!}
-                                    {!!html_entity_decode($shippingAddress->state ? $shippingAddress->state . '<br/>' : '')!!}
-                                    {!!html_entity_decode($shippingAddress->postcode ? $shippingAddress->postcode . '<br/>' : '')!!}
-                                    {!!html_entity_decode($shippingAddress->describe_address ? $shippingAddress->describe_address . '<br/>' : '')!!}
+                <div class="card border-0 px-4 py-4">
+                    <x-inform-users></x-inform-users>
 
-                                    <a class="text-success"
-                                       href="{{route('shipping-address.edit',$shippingAddress->id)}}">Edit
-                                        Address</a>
-                                </address>
+                    @include('user.pages.profiles.partial.details')
+
+                    @if(count($shippingAddresses) > 0)
+                        <div class="card px-3 py-3 mt-3">
+                            <div class="row">
+                                @foreach($shippingAddresses as $shippingAddress)
+                                    <div class="col-md-4 col-xl-3 col-sm-6 address-height">
+                                        <h5>{!!html_entity_decode($shippingAddress->title ? $shippingAddress->title . '' : '')!!}</h5>
+                                        <address>
+                                            {!!html_entity_decode($shippingAddress->line1 ? $shippingAddress->line1 . '<br/>' : '')!!}
+                                            {!!html_entity_decode($shippingAddress->line2 ? $shippingAddress->line2 . '<br/>' : '')!!}
+                                            {!!html_entity_decode($shippingAddress->city ? $shippingAddress->city . '<br/>' : '')!!}
+                                            {!!html_entity_decode($shippingAddress->state ? $shippingAddress->state . '<br/>' : '')!!}
+                                            {!!html_entity_decode($shippingAddress->postcode ? $shippingAddress->postcode . '<br/>' : '')!!}
+                                            {!!html_entity_decode($shippingAddress->describe_address ? $shippingAddress->describe_address . '<br/>' : '')!!}
+
+                                            <a class="text-success"
+                                               href="{{route('shipping-address.edit',$shippingAddress->id)}}">Edit
+                                                Address</a>
+                                        </address>
+                                    </div>
+                                @endforeach
                             </div>
-                        @endforeach
-                    </div>
-                </div>
-                
-                @endif
+                        </div>
 
-                <div class="card border-0 pt-5">
+                    @endif
+                </div>
+
+                <div class="card border-0 px-4 py-4">
                     <div class="bg-white">
                         <h3 class="text-uppercase font-weight-bold h5">Create New Shipping Address</h3>
                     </div>
@@ -52,20 +55,23 @@
                         </div>
 
 
-
-                            <div class="col-md-12">
-                                <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
                                 <div class="form-group col-6">
                                     <label class="float-left" for="line1">Line 1</label>
-                                    <input class="form-control" type="text" name="line1" id="line1" value="{{old('line1')}}"
-                                           placeholder="Address line 1" data-parsley-error-message="Enter address line 1"
+                                    <input class="form-control" type="text" name="line1" id="line1"
+                                           value="{{old('line1')}}"
+                                           placeholder="Address line 1"
+                                           data-parsley-error-message="Enter address line 1"
                                            required>
                                 </div>
                                 <div class="form-group col-6">
                                     <label class="float-left" for="line2">Line 2</label>
-                                    <input class="form-control" type="text" name="line2" id="line2" value="{{old('line2')}}"
-                                           placeholder="Address line 2" data-parsley-error-message="Enter address line 2"
-                                           >
+                                    <input class="form-control" type="text" name="line2" id="line2"
+                                           value="{{old('line2')}}"
+                                           placeholder="Address line 2"
+                                           data-parsley-error-message="Enter address line 2"
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -139,9 +145,9 @@
                             <label class="float-left" for="postcode">Zipcode</label>
                             <input class="form-control zipcode" type="text" name="postcode" id="postcode"
                                    value="{{old('postcode')}}"
-                                   placeholder="Enter your zipcode" data-parsley-error-message="Enter your zipcode" required>
+                                   placeholder="Enter your zipcode" data-parsley-error-message="Enter your zipcode"
+                                   required>
                         </div>
-
 
 
                         <div class="form-group col-12">

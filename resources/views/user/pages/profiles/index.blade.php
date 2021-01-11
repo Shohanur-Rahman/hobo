@@ -6,9 +6,10 @@
 
             @include('user.pages.profiles.partial.sidebar')
             <div class="col-md-9 col-sm-12 col-xs-12 pb-4">
-                <x-inform-users></x-inform-users>
+
 
                 <div class="card border-0 px-4 py-4">
+                    <x-inform-users></x-inform-users>
                     <div class="bg-white">
                         <h3 class="text-uppercase">My Dashboard</h3>
                         @if($user->user_type == 'Super-admin' or $user->user_type == 'Admin')
@@ -31,14 +32,17 @@
                                             </a>
                                         @else
                                             <a class="text-white" href="javascript:">
-                                                <button class="btn btn-secondary disabled w-100 my-2">Your Account is disabled
+                                                <button class="btn btn-secondary disabled w-100 my-2">Your Account is
+                                                    disabled
                                                 </button>
                                             </a>
                                         @endif
                                     @endif
                                 @else
 
-                                    <button class="btn btn-primary w-100 my-2"><a class="text-white" href="{{route('companies.create')}}">Apply For Seller</a></button>
+                                    <button class="btn btn-primary w-100 my-2"><a class="text-white"
+                                                                                  href="{{route('companies.create')}}">Apply
+                                            For Seller</a></button>
                                 @endif
                             @else
                                 <a class="text-white" href="{{route('profiles.edit')}}">
@@ -94,56 +98,58 @@
                             </div>
                         </div>
                         <div class="card border-0">
-                           <div class="row">
-                               <div class="col-md-6">
-                                   <div class="">
-                                       <h3>Account Information</h3>
-                                   </div>
-                                   <div class="d-flex justify-content-between flex-wrap">
-                                       <div class="row" style="width: 100%;">
-                                           <div class="col-md-12 col-xs-12">
-                                               <h5>Contact Information <a class="text-success pl-3"
-                                                                          href="{{route('profiles.edit')}}">Edit</a></h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="">
+                                        <h3>Account Information</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-md-12 col-xs-12">
+                                                <h5>Contact Information <a class="text-success pl-3"
+                                                                           href="{{route('profiles.edit')}}">Edit</a>
+                                                </h5>
 
-                                               <p> {{$user->name}}<br>
-                                                   {{$user->email}}!<br>
-                                                   <a class="text-success" href="{{route('change-password.edit')}}">Change
-                                                       Password</a></p>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
+                                                <p> {{$user->name}}<br>
+                                                    {{$user->email}}!<br>
+                                                    <a class="text-success" href="{{route('change-password.edit')}}">Change
+                                                        Password</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                               @if($company != null)
-                                   <div class="col-md-6">
-                                       <div class="">
-                                           <h3>Company Information</h3>
-                                       </div>
-                                       <div class="d-flex justify-content-between flex-wrap">
-                                           <div class="row" style="width: 100%;">
-                                               <div class="col-md-12 col-xs-12">
-                                                   <div class="d-flex">
-                                                       <img class="rounded-circle" style="width: 40px;height: 40px" src="{{asset($company->company_img)}}" alt="">
-                                                       <h3 class="ml-2">{{$company->company_name}}</h3>
-                                                   </div>
+                                @if($company != null)
+                                    <div class="col-md-6">
+                                        <div class="">
+                                            <h3>Company Information</h3>
+                                        </div>
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <div class="row" style="width: 100%;">
+                                                <div class="col-md-12 col-xs-12">
+                                                    <div class="d-flex">
+                                                        <img class="rounded-circle" style="width: 40px;height: 40px"
+                                                             src="{{asset($company->company_img)}}" alt="">
+                                                        <h3 class="ml-2">{{$company->company_name}}</h3>
+                                                    </div>
 
-                                                   <p> {{$company->company_number}}<br> </p>
-                                                   <address>
-                                                       {!!html_entity_decode($company->line1 ? $company->line1 . ',' : '')!!}
-                                                       {!!html_entity_decode($company->line2 ? $company->line2 . ',' : '')!!}
-                                                       {!!html_entity_decode($company->state ? $company->state . ',' : '')!!}
-                                                       {!!html_entity_decode($company->state ? $company->state . '<br/>' : '')!!}
-                                                       {!!html_entity_decode($company->postcode ? $company->postcode . '<br/>' : '')!!}
-                                                       {!!html_entity_decode($company->describe_address ? $company->describe_address . '<br/>' : '')!!}
+                                                    <p> {{$company->company_number}}<br></p>
+                                                    <address>
+                                                        {!!html_entity_decode($company->line1 ? $company->line1 . ',' : '')!!}
+                                                        {!!html_entity_decode($company->line2 ? $company->line2 . ',' : '')!!}
+                                                        {!!html_entity_decode($company->state ? $company->state . ',' : '')!!}
+                                                        {!!html_entity_decode($company->state ? $company->state . '<br/>' : '')!!}
+                                                        {!!html_entity_decode($company->postcode ? $company->postcode . '<br/>' : '')!!}
+                                                        {!!html_entity_decode($company->describe_address ? $company->describe_address . '<br/>' : '')!!}
 
-                                                   </address>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               @endif
+                                                    </address>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
 
-                           </div>
+                            </div>
                             <div class="">
                                 <h4>Shipping Address Book</h4>
                                 <div class="manage_add"><a class="text-success"

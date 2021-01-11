@@ -152,76 +152,72 @@ function makeURL($queryString, $key, $value)
                 </div>
             </div>
             <div class="col-xl-9 col-lg-9">
-                <div class="row align-items-center">
-                    <div class="white-bg px-4 py-4">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="dropdown filter-box">
-                                    <button class="btn-filter" type="button" id="shortByDropDown" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                        Short By : {{$sortText}} <i class="glyphicon glyphicon-chevron-down"></i>
-                                    </button>
-                                    <div class="dropdown-menu filter-dropdown" aria-labelledby="shortByDropDown">
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',0)}}">Default
-                                            Sorting</a>
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',1)}}">Sort
-                                            by A - Z</a>
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',2)}}">Sort
-                                            by Z - A</a>
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',3)}}">Sort
-                                            Price Low - High</a>
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',4)}}">Sort
-                                            Price High - Low</a>
-                                    </div>
-                                </div>
-                                <div class="dropdown filter-box">
-                                    <button class="btn-filter" type="button" id="pagerDropdown" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                        Show : 15 <i class="glyphicon glyphicon-chevron-down"></i>
-                                    </button>
-                                    <div class="dropdown-menu filter-dropdown" aria-labelledby="pagerDropdown">
-
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',15)}}">15</a>
-
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',25)}}">25</a>
-
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',40)}}">40</a>
-
-                                        <a class="dropdown-item"
-                                           href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',60)}}">60</a>
-
-                                    </div>
-                                </div>
+                <div class="row align-items-center white-bg mt-1 mx-2p">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="dropdown filter-box">
+                            <button class="btn-filter" type="button" id="shortByDropDown"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Short By : {{$sortText}} <i class="glyphicon glyphicon-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="shortByDropDown">
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',0)}}">Default
+                                    Sorting</a>
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',1)}}">Sort
+                                    by A - Z</a>
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',2)}}">Sort
+                                    by Z - A</a>
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',3)}}">Sort
+                                    Price Low - High</a>
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('order',4)}}">Sort
+                                    Price High - Low</a>
                             </div>
-                            <div class="col-lg-5 col-md-12 pt-3">
+                        </div>
+                        <div class="dropdown filter-box">
+                            <button class="btn-filter" type="button" id="pagerDropdown"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                Show : 15 <i class="glyphicon glyphicon-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="pagerDropdown">
 
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',15)}}">15</a>
 
-                                <div class="site-pagination pull-right">
-                                    <span class="pt-5">Showing {{$products->firstItem()}}–{{$products->lastItem()}} of {{$products->total()}} results</span>
-                                </div>
-                                <div class="product-view-system pull-right" role="tablist">
-                                    <ul class="nav nav-tabs">
-                                        <li><a class="active" data-toggle="tab" href="#grid-products"><img
-                                                    src="{{asset('user/assets/images/icons/icon-grid.png')}}"
-                                                    alt=""/></a>
-                                        </li>
-                                        <li><a data-toggle="tab" href="#list-products"><img
-                                                    src="{{asset('user/assets/images/icons/icon-list.png')}}"
-                                                    alt=""/></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',25)}}">25</a>
+
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',40)}}">40</a>
+
+                                <a class="dropdown-item"
+                                   href="{{route('product.index', $categoryDetails->slug).generateQueryString('page_size',60)}}">60</a>
 
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 pt-3">
+                        <div class="site-pagination pull-right">
+                            <span class="pt-5">Showing {{$products->firstItem()}}–{{$products->lastItem()}} of {{$products->total()}} results</span>
+                        </div>
+                        <div class="product-view-system pull-right" role="tablist">
+                            <ul class="nav nav-tabs">
+                                <li><a class="active" data-toggle="tab" href="#grid-products"><img
+                                            src="{{asset('user/assets/images/icons/icon-grid.png')}}"
+                                            alt=""/></a>
+                                </li>
+                                <li><a data-toggle="tab" href="#list-products"><img
+                                            src="{{asset('user/assets/images/icons/icon-list.png')}}"
+                                            alt=""/></a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
                 <div class="tab-content">
@@ -309,7 +305,7 @@ function makeURL($queryString, $key, $value)
                                 $rating = \App\Models\Products::rating($product->id);
                                 $ratingCount = \App\Models\Products::ratingCount($product->id)
                             @endphp
-                            <div class="product-single wide-style">
+                            <div class="product-single wide-style white-bg">
                                 <div class="row align-items-center">
                                     <div class="col-xl-3 col-lg-6 col-md-6">
                                         <div class="product-thumb">
@@ -375,7 +371,7 @@ function makeURL($queryString, $key, $value)
                         @endforeach
                     </div>
                 </div>
-                <div class="row align-items-center mt-30">
+                <div class="row align-items-center mt-30 white-bg mx-1 px-1 py-1">
                     <div class="col-lg-6">
                         <div class="site-pagination">
                             {{$products->links()}}

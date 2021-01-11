@@ -84,10 +84,16 @@ body{
     float: left;
     transition: .3s;
 }
-
+.mini-cart ul li a i {
+    color: #ffd2d2;
+}
 .price_filter  .section-title h3,
 .white-bg .section-title h3{
     z-index: 99 !important;
+}
+.mx-2p{
+    margin-left: 0px;
+    margin-right: 2px;
 }
 .white-bg {
     background: #fff;
@@ -536,6 +542,7 @@ h4.product-title-name a {
 
 .flip-box {
     background: #fff;
+    padding: 5px;
 }
 
 .flip-box:hover {

@@ -8,7 +8,7 @@
             <div class="col-md-9 col-sm-8 col-xs-12 pb-4">
                 <x-inform-users></x-inform-users>
 
-                <div class="card border-0">
+                <div class="card border-0 px-4 py-4">
                     <div class="dashboard">
                         <div class="recent-orders">
                             <div class="d-flex justify-content-between">
