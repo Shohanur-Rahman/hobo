@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="985df57a-7251-41b7-91d1-ffe2e3228d08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/layouts/layout-third.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/layouts/layout-third.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/pages/second/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/pages/second/products/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/partials/widget/brand_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/partials/widget/brand_slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/partials/widget/brands_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/partials/widget/brands_slider.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610357627529</updated>
-      <workItem from="1610357628887" duration="4024000" />
+      <workItem from="1610357628887" duration="5968000" />
     </task>
     <servers />
   </component>

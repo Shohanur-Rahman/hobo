@@ -85,6 +85,14 @@ body{
     transition: .3s;
 }
 
+.price_filter  .section-title h3,
+.white-bg .section-title h3{
+    z-index: 99 !important;
+}
+.white-bg {
+    background: #fff;
+    border-radius: 4px;
+}
 .products-sort li {
     list-style: none;
     display: block;
