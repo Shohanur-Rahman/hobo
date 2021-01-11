@@ -128,13 +128,13 @@
                     <div class="row mt-30">
                         <div class="col-lg-6">
                             <div class="cart-update">
-                                <a href="{{route('app.home')}}" class="btn-common">CONTINUE SHOPPING</a>
+                                <a href="{{route('app.home')}}" class="btn-common mt-1">CONTINUE SHOPPING</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="cart-update pull-right">
                                 @if($wishLists->isNotEmpty())
-                                    <button type="submit" class="btn-common">UPDATE WishList</button>
+                                    <button type="submit" class="btn-common mt-1">UPDATE WishList</button>
                                 @endif
                             </div>
                         </div>

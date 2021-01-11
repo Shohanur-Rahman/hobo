@@ -53,7 +53,7 @@ textarea.parsley-error {
 *End parsley style
 *
 */
-body{
+body {
     background: #0b2e13;
 }
 
@@ -74,31 +74,38 @@ body{
 .others-bg {
     background: #90ee9054; /*lightgreen;*/
 }
+
 .register-login a {
     font-size: 14px;
     color: #ffd2d2;
 }
+
 .short-dropdown {
     cursor: pointer;
     display: block;
     float: left;
     transition: .3s;
 }
+
 .mini-cart ul li a i {
     color: #ffd2d2;
 }
-.price_filter  .section-title h3,
-.white-bg .section-title h3{
+
+.price_filter .section-title h3,
+.white-bg .section-title h3 {
     z-index: 99 !important;
 }
-.mx-2p{
+
+.mx-2p {
     margin-left: 0px;
     margin-right: 2px;
 }
+
 .white-bg {
     background: #fff;
     border-radius: 4px;
 }
+
 .products-sort li {
     list-style: none;
     display: block;
@@ -194,9 +201,11 @@ body{
     transform: scale(1.05);
     transition: .3s;
 }
-.cat-table-hidden{
+
+.cat-table-hidden {
     overflow: hidden;
 }
+
 .add-to-cart {
     background-color: rgba(204, 210, 234, .9);
     border-color: rgba(204, 210, 234, .9);
@@ -632,3 +641,12 @@ h4.product-title-name a {
 /*
 Tabs
  */
+
+@media only screen and (max-width: 991px) {
+    .cart-update.pull-right {
+        float: left !important;
+    }
+    .cat-table-hidden {
+        overflow: auto;
+    }
+}

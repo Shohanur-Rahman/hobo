@@ -170,7 +170,7 @@
                     </div>
                     <div class="mini-cart text-right">
                         <ul>
-                            <li><a href="#"><i class="icon_heart_alt"></i><span>1</span></a></li>
+                            <li><a href="{{route('wish-lists.index')}}"><i class="icon_heart_alt"></i><span>1</span></a></li>
                             <li class="minicart-icon"><a href="#"><i
                                         class="icon_bag_alt"></i><span
                                         class="dummy_total_cart">{{count($myCartList)}}</span></a>

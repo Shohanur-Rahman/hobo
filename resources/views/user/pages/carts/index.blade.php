@@ -141,17 +141,17 @@
                     <div class="row mt-30">
                         <div class="col-lg-4">
                             <div class="cart-update">
-                                <a href="{{route('app.home')}}" class="btn-common">CONTINUE SHOPPING</a>
+                                <a href="{{route('app.home')}}" class="btn-common mt-1">CONTINUE SHOPPING</a>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="cart-update">
-                                <a href="{{route('cart.clear')}}" class="btn-common btn-danger">CLEAR CART</a>
+                                <a href="{{route('cart.clear')}}" class="btn-common btn-danger mt-1">CLEAR CART</a>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="cart-update pull-right">
-                                <button type="submit" class="btn-common btn-success">UPDATE CART</button>
+                                <button type="submit" class="btn-common btn-success mt-1">UPDATE CART</button>
                             </div>
                         </div>
                     </div>
