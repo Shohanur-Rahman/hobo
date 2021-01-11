@@ -1,0 +1,155 @@
+.side-menu-area {
+  margin-top: 90px;
+}
+
+/**
+*
+* parsley form validate
+*
+*
+*/
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+    color: #468847;
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border: 1px solid #EED3D7;
+}
+
+.parsley-errors-list {
+    margin: 2px 0 3px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    opacity: 0;
+    color: #B94A48;
+    transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+}
+
+    .parsley-errors-list.filled {
+        opacity: 1;
+    }
+
+
+/**
+*
+*End parsley style
+*
+*/
+
+
+
+.upload-preview img {
+    height: 80px;
+    width: 80px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+}
+.hdn-uploder {
+    display: none !important;
+}
+.form-label{
+    width: 100%;
+    display: block;
+}
+
+img.table-image {
+    max-height: 46px;
+    box-shadow: 0px 1px 3px black;
+}
+
+.inline-widged {
+    display: inline-block;
+    padding: 3px 25px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+
+.inline-widged .single-label {
+    padding: 0px 0;
+    display: block;
+}
+
+.bootstrap-touchspin .btn {
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.sidebar-menu li a{
+    height: 30px;
+    color: #e0dde4;
+}
+.sidebar-menu li .treeview-menu li a{
+    height: 25px;
+    color: #95a1b6;
+    border: none;
+}
+
+.sidebar-menu > li.active > a, .sidebar-menu > li.menu-open > a,
+.sidebar-menu li .treeview-menu li a:hover,
+.sidebar-menu li .treeview-menu li a.active,
+.sidebar-menu > li.active > a i, .sidebar-menu li a:hover i,
+.sidebar-menu > li > a:hover, .sidebar-menu > li.active > a, .sidebar-menu > li.menu-open > a,
+.sidebar-menu > li.active > a, .sidebar-menu > li.menu-open > a > i {
+    color: #fff;
+    background: #000;
+}
+
+.sidebar-menu li .treeview-menu {
+    margin: 0;
+    padding: 10px 10px 20px;
+}
+
+.sidebar-menu .treeview.menu-open .treeview-menu{
+    background: #000;
+}
+
+.ecaps-sidenav{
+overflow-y: hidden;
+}
+
+.ecaps-sidemenu-area {
+    background: linear-gradient(50deg, #273444, #272b44) !important;
+}
+
+.form-tab{
+    right: 30px;
+}
+.footer-area {
+    position: fixed;
+    bottom: 0;
+}
+
+.repeat-area{
+    margin-bottom: 50px;
+}
+.image-uploader .upload-text {
+    cursor: pointer;
+}
+
+.grid-icon {
+    font-size: 28px;
+}
+
+.k-widget.k-combobox{
+    width: 100%;
+}
+.ecaps-logo a img {
+    max-height: 60px;
+    overflow: hidden;
+    margin: auto;
+}

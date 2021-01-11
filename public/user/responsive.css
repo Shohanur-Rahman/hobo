@@ -1,0 +1,15 @@
+@media (max-width: 1026px) {
+    .header-logo img{
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hidden-xs{
+        display: none !important;
+    }
+
+    .header-logo img{
+        max-height: 40px;
+    }
+}
